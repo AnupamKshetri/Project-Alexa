@@ -6,6 +6,8 @@ try:
         print("listening...")
         voice = listener.listen(source)
         command = listener.recognize_google(voice)
-        print(command)
+        commamd = command.lower()
+        if "alexa" in command:
+            print(command)
 except:
     pass
